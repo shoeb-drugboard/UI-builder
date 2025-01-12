@@ -20,6 +20,12 @@ export default {
       animation: {
         "smooth-bounce": "bounce 1s 3 ease-in-out",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+      screens: {
+        xs: "320px",
+      },
     },
   },
   darkMode: "class",
