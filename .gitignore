@@ -40,5 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 css.d.ts
+custom.d.ts
 
 *storybook.log
