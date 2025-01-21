@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const anthropic = new Anthropic({
     // defaults to process.env["ANTHROPIC_API_KEY"]
-    apiKey: "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",
+    apiKey: "my_api_key",
 });
 
 const msg = await anthropic.messages.create({

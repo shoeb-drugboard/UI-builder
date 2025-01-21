@@ -2,9 +2,9 @@ import React from 'react';
 import * as THREE from 'three'
 import { OrbitControls, Stars, useTexture } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-import earth from '@/assets/earthlights1k.jpg'
-import earthNormal from '@/assets/earthmap1k.jpg'
-import earthClouds from '@/assets/earthcloudmap.jpg'
+import earth from '../../../public/earthlights1k.jpg'
+import earthNormal from '../../../public/earthmap1k.jpg'
+import earthClouds from '../../../public/earthcloudmap.jpg'
 const Ball = () => {
     const meshRef = React.useRef<THREE.Mesh>(null);
     const groupRef = React.useRef<THREE.Group>(null);
