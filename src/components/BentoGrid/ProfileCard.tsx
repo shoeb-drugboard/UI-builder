@@ -19,9 +19,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ className, name, role }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
             whileHover={{ scale: 1.02 }}
-            className={cn('w-full h-fit', className)}
+            className={cn('w-full h-fit')}
         >
-            <Card className={cn(`grid grid-cols-12 bg-white p-4 rounded-lg shadow-md h-32 w-full font-poppins relative`)} >
+            <Card className={cn(`grid grid-cols-12 bg-white p-4 rounded-lg shadow-md h-32 w-full font-poppins relative`, className)} >
                 <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -31,7 +31,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ className, name, role }) => {
                     <Image src={img} alt='profile' className='rounded-full' width={80} height={80} />
                 </motion.div>
                 <CardBody className="col-span-8 grid grid-flow-row content-center justify-start">
-                    <h1 className='font-semibold text-2xl text-black p-0'>{name}</h1>
+                    <h1 className='font-semibold text-2xl p-0'>{name}</h1>
                     <p className='text-slate-400 font-semibold text-[11.5px] px-0.5 uppercase'>{role}</p>
                 </CardBody>
                 <motion.div

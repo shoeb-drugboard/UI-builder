@@ -50,12 +50,6 @@ const UserCard = ({ name = 'Shoeb', role = 'Frontend Engineer', className }: Use
                     </motion.div>
                 </CardBody>
             </Card>
-            <motion.hr
-                initial={{ width: 0 }}
-                animate={{ width: "75%" }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className='ml-auto w-full'
-            />
         </motion.div>
     )
 }

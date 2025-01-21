@@ -2,6 +2,7 @@ import { Button } from '@nextui-org/react'
 import { PlusIcon } from 'lucide-react'
 import React from 'react'
 import UserCard from './UserCard'
+import { motion } from 'framer-motion';
 import { cn } from '@/utils/classes'
 type UsersListProps = {
     users: Array<{ name: string, role: string }>,
@@ -20,7 +21,16 @@ const UsersList = ({ users = [
                 <div className='max-h-[250px] w-[100%] row-span-10 gap-1 overflow-y-scroll scrollbar-hide md:w-[90%]'>
                     {
                         users.map((user, index) => (
-                            <UserCard key={index} name={user.name} role={user.role} className='' />))
+                            <>
+                                <UserCard key={index} name={user.name} role={user.role} className='' />
+                                <motion.hr
+                                    initial={{ width: 0 }}
+                                    animate={{ width: "75%" }}
+                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                    className='ml-auto w-full'
+                                />
+                            </>
+                        ))
                     }
                 </div>
                 <Button className='row-span-2 bg-warning text-white rounded-md w-[200px] h-10 place-self-center'>

@@ -42,7 +42,7 @@ const CustomTooltip: React.FC<TooltipProps<number, string>> = ({ active, payload
     return null;
 };
 
-const MetricCard: React.FC<{
+export const MetricCard: React.FC<{
     label: string;
     value: string;
     data: Array<{ value: number; date: string }>;
@@ -54,14 +54,14 @@ const MetricCard: React.FC<{
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className={cn(`flex flex-col gap-2 p-4 rounded-lg transition-all duration-300 ${isHovered ? 'bg-gray-50' : ''} cursor-pointer`, className)}
+        <div className={cn(`flex flex-col text-black bg-white gap-2 p-4 rounded-lg transition-all duration-300 ${isHovered ? 'bg-gray-50' : ''} cursor-pointer`, className)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={onClick}
         >
-            <span className="text-xs text-gray-500 font-medium text-center md:text-sm">{label}</span>
+            <span className={`text-xs font-medium text-center md:text-sm ${isHovered ? "text-blue-800" : ""}`}>{label}</span>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <span className={`text-sm font-bold transition-colors duration-300 md:text-md lg:text-xl ${isHovered ? 'text-blue-600' : 'text-gray-900'
+                <span className={`text-sm font-bold transition-colors duration-300 md:text-md lg:text-xl ${isHovered ? 'text-blue-600' : ''
                     }`}>{value}</span>
                 <div className="w-24 h-8">
                     <ResponsiveContainer width="100%" height="100%">
