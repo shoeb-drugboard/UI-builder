@@ -1,11 +1,11 @@
-import ProfileCard from "@/components/ProfileCard";
+import ProfileCard from "@/components/BentoGrid/ProfileCard";
 import { Meta, StoryObj } from "@storybook/react";
 
 type StoryProps = React.ComponentProps<typeof ProfileCard>;
 
 
 const meta: Meta<StoryProps> = {
-    title: 'NextUI/ProfileCard',
+    title: 'Layout/ProfileCard',
     component: ProfileCard,
     argTypes: {
         className: {
@@ -18,6 +18,9 @@ const meta: Meta<StoryProps> = {
             control: 'text'
         }
     },
+    args: {
+        className: "max-w-xl"
+    }
 
 }
 
@@ -27,7 +30,8 @@ type Story = StoryObj<StoryProps>;
 export const Default: Story = {
     args: {
         name: 'Shoeb Uddin',
-        role: 'Frontend Engineer'
+        role: 'Frontend Engineer',
+        className: "max-w-xl mx-4 text-black"
     }
 };
 

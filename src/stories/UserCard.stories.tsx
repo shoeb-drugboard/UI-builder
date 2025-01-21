@@ -1,4 +1,4 @@
-import UserCard from "@/components/UserCard";
+import UserCard from "@/components/BentoGrid/UserCard";
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
@@ -6,7 +6,7 @@ type StoryProps = React.ComponentProps<typeof UserCard>;
 
 
 const meta: Meta<StoryProps> = {
-    title: "NextUI/UserCard",
+    title: "Components/UserCard",
     component: UserCard,
     argTypes: {
         name: {
@@ -29,7 +29,7 @@ export const Default: Story = {
     args: {
         name: "Shoeb",
         role: "Frontend Engineer",
-        className: "bg-white rounded-md shadow-md"
+        className: "bg-white rounded-md shadow-md max-w-[360px] w-full"
     }
 }
 

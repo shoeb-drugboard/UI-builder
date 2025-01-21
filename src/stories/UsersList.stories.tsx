@@ -1,4 +1,4 @@
-import UsersList from "@/components/UsersList";
+import UsersList from "@/components/BentoGrid/UsersList";
 
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -6,7 +6,7 @@ type StoryProps = React.ComponentProps<typeof UsersList>;
 
 
 const meta: Meta<StoryProps> = {
-    title: 'NextUI/UsersList',
+    title: 'Layout/UsersList',
     component: UsersList,
     argTypes: {
     },
@@ -25,6 +25,7 @@ export const Default: Story = {
             { name: 'Bob Johnson', role: 'Editor' },
             { name: 'Shoeb', role: 'Frontend Engineer' },
             { name: 'Shoeb', role: 'Frontend Engineer' },
-        ]
-    }
+        ],
+        className: "max-w-[400px]"
+    },
 };
