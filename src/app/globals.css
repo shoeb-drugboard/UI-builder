@@ -3,6 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+  :root {
+    --background: 27 27 27;
+    --foreground: 255 255 255;
+    --muted: 115 115 115;
+    --accent: 254 254 91;
+  }
+} */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,4 +28,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

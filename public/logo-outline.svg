@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff8f"/>
+      <stop offset="100%" style="stop-color:#00d2ff"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outlined R-shaped arrow -->
+  <path d="M20 80 
+           L20 20 
+           L80 20 
+           L50 50
+           L80 80 
+           L60 80
+           L40 60
+           L40 80
+           Z" 
+        fill="transparent"
+        stroke="url(#neonGradient)"
+        stroke-width="0.2"
+        stroke-linejoin="round" />
+</svg>

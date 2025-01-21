@@ -19,6 +19,18 @@ export default {
       },
       animation: {
         "smooth-bounce": "bounce 1s 3 ease-in-out",
+        "spin-slow": "spin 40s linear infinite",
+        "spin-slow-reverse": "spin-reverse 40s linear infinite",
+      },
+      keyframes: {
+        spin: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "spin-reverse": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(-360deg)" },
+        },
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
