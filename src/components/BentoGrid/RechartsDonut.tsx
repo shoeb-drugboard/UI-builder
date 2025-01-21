@@ -18,7 +18,7 @@ interface RechartsDonutProps {
 
 const RechartsDonut: React.FC<RechartsDonutProps> = ({
     data,
-    size,
+    size = 300,  // provide default size
     className,
     innerRadius = 60,
     outerRadius = 80,
@@ -49,7 +49,7 @@ const RechartsDonut: React.FC<RechartsDonutProps> = ({
     return (
         <div className={cn("grid content-center justify-center gap-2 container mx-auto bg-white w-full p-4 rounded-lg shadow-lg", className)}>
             <div className="relative" style={{ width: size, height: size }}>
-                <ResponsiveContainer>
+                <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                         <Pie
                             data={data}
