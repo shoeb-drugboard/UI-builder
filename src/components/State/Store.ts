@@ -60,13 +60,14 @@ const useStore = create<RootStore>((set, get) => ({
 
   resetCart: () => set({ ...initialState }),
   name: "John",
-  age: 30,
+  email: "johndoe@gmail.com",
   fullName: "John Doe",
   address: "",
   setAddress: (address: UserStore["address"]) =>
     set((state) => ({ ...state, address })),
   setName: (name: UserStore["name"]) => set((state) => ({ ...state, name })),
-  setAge: (age: UserStore["age"]) => set((state) => ({ ...state, age })),
+  setEmail: (email: UserStore["email"]) =>
+    set((state) => ({ ...state, email })),
   setFullName: (fullName: UserStore["fullName"]) =>
     set((state) => ({ ...state, fullName })),
 }));

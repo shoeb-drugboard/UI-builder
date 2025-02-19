@@ -1,6 +1,6 @@
 type User = {
   name: string;
-  age: number;
+  email: string;
   fullName: string;
   address: string;
 };
@@ -8,7 +8,7 @@ type User = {
 type UserActions = {
   setAddress: (address: User["address"]) => void;
   setName: (name: User["name"]) => void;
-  setAge: (age: User["age"]) => void;
+  setEmail: (email: User["email"]) => void;
   setFullName: (fullName: User["fullName"]) => void;
 };
 
