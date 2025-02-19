@@ -2,10 +2,7 @@
 import React from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
-
-
-interface CarProps extends React.ComponentProps<'group'> { }
+import { ThreeElements, useFrame } from '@react-three/fiber'
 
 interface GLTFResult {
     nodes: {
@@ -16,7 +13,7 @@ interface GLTFResult {
     }
 }
 
-export function Car(props: CarProps) {
+export function Car(props: ThreeElements['group']) {
     const carRef = React.useRef<THREE.Group>(null)
     const { nodes, materials } = useGLTF('/models/car-3d.glb') as unknown as GLTFResult
     useFrame(({ clock }) => {

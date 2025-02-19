@@ -20,7 +20,7 @@ const Spline = () => {
         new THREE.Vector3(2, 0, 0)
     ]
 
-    const lineGeometry = new THREE.BufferGeometry().setFromPoints(points)
+    // const lineGeometry = new THREE.BufferGeometry().setFromPoints(points)
 
     return (
         <>

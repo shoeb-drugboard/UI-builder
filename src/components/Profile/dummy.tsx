@@ -281,7 +281,7 @@ const ProfileHome: NextPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                     >
-                        Let's Connect
+                        Let&apos;s Connect
                     </motion.h2>
                     <motion.div
                         className="flex justify-center gap-6"

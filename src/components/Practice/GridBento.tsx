@@ -40,7 +40,7 @@ const GridBento = () => {
             ]} />
             <MetricCards className="items i-6 p-4 col-span-12" />
             <InfoCard className="items i-7 rounded-lg col-span-4" />
-            <InfoCard className="items i-8 rounded-lg col-span-4" colorPrimary='purple-600' colorSecondary='bg-purple-100' />
+            <InfoCard className="items i-8 rounded-lg col-span-4" colorPrimaryBtn='purple-600' colorSecondary='bg-purple-100' />
             <InfoCard className="items i-9 rounded-lg col-span-4" />
         </div>
     )

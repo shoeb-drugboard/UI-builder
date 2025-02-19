@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { ThreeElements, useFrame } from '@react-three/fiber'
 
-interface ModelProps extends React.ComponentProps<'group'> { }
 
 interface HelmetGLTF {
     nodes: {
@@ -15,7 +14,7 @@ interface HelmetGLTF {
     scene: THREE.Group
 }
 
-export function Helmet(props: ModelProps) {
+export function Helmet(props: ThreeElements['group']) {
     const helmetRef = useRef<THREE.Group>(null);
     const mousePosition = useRef({ x: 0, y: 0 });
     const { nodes, materials } = useGLTF('/models/halo-helmet.glb') as unknown as HelmetGLTF;

@@ -49,7 +49,7 @@ const AboutMe = () => {
                                 rel="noopener noreferrer"
                                 className="p-3 hover:bg-white/20 rounded-full transition-all duration-300 backdrop-blur-sm bg-white/10 border border-white/20 group"
                             >
-                                <Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                                <Icon />
                             </Link>
                         );
                     })}

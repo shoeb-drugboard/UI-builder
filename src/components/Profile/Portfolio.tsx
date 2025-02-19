@@ -12,7 +12,7 @@ const FloatingText: React.FC<{ children: React.ReactNode, position: [number, num
     useFrame(({ clock }) => {
         if (ref.current) {
             if (ref.current && 'position' in ref.current) {
-                (ref.current as any).position.z = Math.sin(clock.getElapsedTime()) * 0.2;
+                (ref.current as { position: { z: number } }).position.z = Math.sin(clock.getElapsedTime()) * 0.2;
             }
         }
     });
@@ -178,7 +178,7 @@ const Portfolio = () => {
                 <h2 className="text-4xl font-bold text-white mb-8">About Me</h2>
                 <div className="max-w-4xl text-gray-300 space-y-6">
                     <p>
-                        I'm a dedicated undergraduate engineer focusing on frontend development with experience in React.js, Next.js, and styling libraries (ShadCN, Tailwind CSS, Bootstrap). Currently expanding knowledge of MERN stack and seeking an Infosys Instep Internship.
+                        I&apos;m a dedicated undergraduate engineer focusing on frontend development with experience in React.js, Next.js, and styling libraries (ShadCN, Tailwind CSS, Bootstrap). Currently expanding knowledge of MERN stack and seeking an Infosys Instep Internship.
                     </p>
                     <h3 className="text-2xl font-bold text-white">Education</h3>
                     <p>

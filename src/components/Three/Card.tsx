@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
+import * as THREE from 'three';
 
 interface ProjectCardProps {
     position: [number, number, number];
@@ -10,9 +11,8 @@ interface ProjectCardProps {
     description: string;
     technology: string;
 }
-
 const ProjectCard: React.FC<ProjectCardProps> = ({ position, rotation, title, description, technology }) => {
-    const meshRef = useRef(null);
+    const meshRef = useRef<THREE.Mesh>(null);
 
     useFrame((state) => {
         if (meshRef.current) {

@@ -3,6 +3,7 @@ import React, { useRef, useMemo, memo } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { GLTF } from 'three-stdlib'
+import { ThreeElements } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
     nodes: {
@@ -12,8 +13,7 @@ type GLTFResult = GLTF & {
         ['Scene_-_Root']: THREE.MeshToonMaterial
     }
 }
-
-export const Spaceship = memo((props: JSX.IntrinsicElements['group']) => {
+export const Spaceship = memo((props: ThreeElements['group']) => {
     const spaceRef = useRef<THREE.Group>(null);
 
     const { nodes, materials } = useGLTF('/models/space_ship-transformed.glb') as GLTFResult;

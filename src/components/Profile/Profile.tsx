@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense, useEffect } from 'react'
 import { Environment, Float, OrbitControls, Sparkles } from '@react-three/drei'
 import { motion } from 'motion/react'
+import Link from 'next/link'
 
 // Types
 interface ProjectType {
@@ -71,12 +72,12 @@ const Projects: React.FC<SectionProps> = ({ projects }) => {
                                     </span>
                                 ))}
                             </div>
-                            <a
+                            <Link
                                 href={project.link}
                                 className="inline-block bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors text-white"
                             >
                                 View Project
-                            </a>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
@@ -288,34 +289,34 @@ const ProfileHome: NextPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                     >
-                        Let's Connect
+                        Let&apos;s Connect
                     </motion.h2>
                     <motion.div
                         className="flex justify-center gap-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                     >
-                        <a
+                        <Link
                             href="mailto:ushoeb25@gmail.com"
                             target='_blank'
                             className="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-colors"
                         >
                             Email
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="https://github.com/sd-code-oeb"
                             target='_blank'
                             className="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-colors"
                         >
                             GitHub
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="https://linkedin.com/in/shoebuddin944"
                             target='_blank'
                             className="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-colors"
                         >
                             LinkedIn
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
